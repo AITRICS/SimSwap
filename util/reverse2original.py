@@ -170,6 +170,4 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
         img = img_mask * target_image + (1-img_mask) * img
         
     final_img = img.astype(np.uint8)
-    if not no_simswaplogo:
-        final_img = logoclass.apply_frames(final_img)
     cv2.imwrite(save_path, final_img)
