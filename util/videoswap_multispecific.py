@@ -44,8 +44,8 @@ def video_swap(video_path, target_id_norm_list,source_specific_id_nonorm_list,id
     # video_HEIGHT = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
     
     fps = video.get(cv2.CAP_PROP_FPS)
-    if  os.path.exists(temp_results_dir):
-            shutil.rmtree(temp_results_dir)
+    # if  os.path.exists(temp_results_dir):
+    #         shutil.rmtree(temp_results_dir)
 
     spNorm =SpecificNorm()
     mse = torch.nn.MSELoss().cuda()
